@@ -5,21 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Inter:wght@400;700&family=Merriweather:wght@700&family=Ubuntu&display=swap" rel="stylesheet">
     <title>CSS Mem Slider</title>
 </head>
 <body>
     <div class="wrapper">
     <header><h1>CSS Mem Slider</h1></header>
     <main>
-        <div class="Slider">
-            <img src="./assets/img/1.jpg" alt="one image">
-            <img src="./assets/img/2.jpg" alt="two image">
-            <img src="./assets/img/3.jpg" alt="three image">
-            <img src="./assets/img/4.jpg" alt="four image">
+        <div class="slider">
+            <img id="img__1" src="./assets/img/1.jpg" alt="one image">
+            <img id="img__2"src="./assets/img/2.jpg" alt="two image">
+            <img id="img__3"src="./assets/img/3.jpg" alt="three image">
+            <img id="img__4"src="./assets/img/4.jpg" alt="four image">
         </div>
         <div class="container">
-            <div class="description"></div>
-            <div class="controlers"></div>
+            <div class="description">
+                <span class="description__one">start memes</span>
+                <span class="description__two">punished by the doorknob</span>
+                <span class="description__three">tricks of autumn</span>
+                <span class="description__four">archaeological tricks</span>
+            </div>
+            <div class="controlers">
+                <input class="control-switch" id="switch__one" name="switch" value="1"  type="radio" checked>
+                <span class="check-button"></span>
+                <input class="control-switch" id="switch__two" name="switch" value="2" type="radio">
+                <span class="check-button"></span>
+                <input class="control-switch" id="switch__three" name="switch" value="3" type="radio">
+                <span class="check-button"></span>
+                <input class="control-switch" id="switch__four" name="switch" value="4" type="radio">
+                <span class="check-button"></span>
+            </div>
         </div>
     </main>
     <footer></footer>
