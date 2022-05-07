@@ -17,33 +17,43 @@ body{
     padding: 0 20px;
 }
 h1{
-    font-family:var(--main-font)
+    font-family:var(--main-font);
 }
 span{
-    font-family:var(--main-font)
+    font-family:var(--main-font);
 }
 .slider{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     overflow: hidden;
     position: relative;
-    flex-direction: column;
+    flex-direction: row;
     padding-bottom: 20px;
+}
+.image-slider{
+    order: 1;
+    padding-bottom: 20px;
+    max-height: 600px;
+}
+.description{
+    order: 2;
+    transition: all 0.5s;
+    z-index: 999;
+    font-size: 20px;
+}
+.control-switch{
+    order: 3;
+    z-index: 999;
 }
 img {
     max-width: none;
     min-width: auto;
     min-height: auto;
-    width: 80%;
+    width: 100%;
+    transition: all 0.5s;
   }
-.container{
-    display: flex;
-    justify-content: space-between;
-}
-.description{
-    font-size: 20px;
-}
 #img__2{
     opacity: 0;
     position: absolute;
@@ -68,6 +78,9 @@ img {
     opacity: 0;
     position: absolute;
 }
+#switch__one{
+    margin-left: auto;
+}
 input[type="radio"] {
     appearance: none;
   background-color: rgb(12 94 143);
@@ -81,5 +94,59 @@ input[type="radio"]:hover{
 }
 input[type="radio"]:checked{
     border: 2px silver solid;
-    background-color: rgb(9 51 76);;
+    background-color: rgb(9 51 76);
+}
+input[type="radio"]:checked:hover{
+    border: 2px silver solid;
+    background-color: rgb(124, 195, 241);
+}
+#switch__two:checked ~ #img__2 {
+    opacity: 1;
+    position: static;
+}
+#switch__two:checked ~ .description__two {
+    opacity: 1;
+    position: static;
+}
+#switch__two:checked ~ #img__1 {
+    opacity: 0;
+    position: absolute;
+}
+#switch__two:checked ~ .description__one {
+    opacity: 0;
+    position: absolute;
+}
+
+#switch__three:checked ~ #img__3 {
+    opacity: 1;
+    position: static;
+}
+#switch__three:checked ~ .description__three {
+    opacity: 1;
+    position: static;
+}
+#switch__three:checked ~ #img__1 {
+    opacity: 0;
+    position: absolute;
+}
+#switch__three:checked ~ .description__one {
+    opacity: 0;
+    position: absolute;
+}
+
+#switch__four:checked ~ #img__4 {
+    opacity: 1;
+    position: static;
+}
+#switch__four:checked ~ .description__four {
+    opacity: 1;
+    position: static;
+}
+#switch__four:checked ~ #img__1 {
+    opacity: 0;
+    position: absolute;
+}
+#switch__four:checked ~ .description__one {
+    opacity: 0;
+    position: absolute;
 }
