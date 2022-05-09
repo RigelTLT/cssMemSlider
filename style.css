@@ -37,8 +37,11 @@ span{
     padding-bottom: 20px;
     max-height: 600px;
 }
-.description{
+.slider-description{
     order: 2;
+}
+
+.description{
     transition: all 0.5s;
     z-index: 999;
     font-size: 20px;
@@ -106,7 +109,7 @@ input[type="radio"]:checked:hover{
     opacity: 1;
     position: static;
 }
-#switch__two:checked ~ .slider-img .description__two {
+#switch__two:checked ~ .slider-description .description__two {
     opacity: 1;
     position: static;
 }
@@ -114,7 +117,7 @@ input[type="radio"]:checked:hover{
     opacity: 0;
     position: absolute;
 }
-#switch__two:checked ~ .slider-img .description__one {
+#switch__two:checked ~ .slider-description .description__one {
     opacity: 0;
     position: absolute;
 }
@@ -123,7 +126,7 @@ input[type="radio"]:checked:hover{
     opacity: 1;
     position: static;
 }
-#switch__three:checked ~ .slider-img .description__three {
+#switch__three:checked ~ .slider-description .description__three {
     opacity: 1;
     position: static;
 }
@@ -131,7 +134,7 @@ input[type="radio"]:checked:hover{
     opacity: 0;
     position: absolute;
 }
-#switch__three:checked ~ .slider-img .description__one {
+#switch__three:checked ~ .slider-description .description__one {
     opacity: 0;
     position: absolute;
 }
@@ -140,7 +143,7 @@ input[type="radio"]:checked:hover{
     opacity: 1;
     position: static;
 }
-#switch__four:checked ~ .slider-img .description__four {
+#switch__four:checked ~ .slider-description .description__four {
     opacity: 1;
     position: static;
 }
@@ -148,12 +151,25 @@ input[type="radio"]:checked:hover{
     opacity: 0;
     position: absolute;
 }
-#switch__four:checked ~ .slider-img .description__one {
+#switch__four:checked ~ .slider-description .description__one {
     opacity: 0;
     position: absolute;
 }
 @media (max-width: 1100px) {
     .wrapper{
         width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .slider-description{
+        width: 100%;
+        order: 4;
+        padding-top: 20px;
+    }
+    #switch__one {
+        margin-left: 0;
+    }
+    .slider{
+        justify-content: center;
     }
 }
